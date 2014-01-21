@@ -26,3 +26,7 @@ w = "This is the left side of ..."
 e = "a string with a right side."
 # print string w and e (concatenation)
 puts w + e
+
+__END__
+-Anything put in " #{} " is treated as a string and interpolated.
+-You can interpolate a variable in another variable.
