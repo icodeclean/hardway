@@ -6,7 +6,8 @@ eyes = 'Blue'
 teeth = 'White'
 hair = 'Brown'
 animal1 = 'koala'
-animal2 = 'monkey'
+animal2 = 'monkeys'
+count = 4
 
 puts "Let's talk about %s" % name
 puts "He's %d inches tall." % height
@@ -14,7 +15,7 @@ puts "He's %d pounds heavy." % weight
 puts "Actually, that's not too heavy."
 puts "He's got %s eyes and %s hair" % [eyes, hair]
 puts "His teeth are usually %s depending on the coffee." % teeth
-puts "He owns a %s and a %s." %[animal1, animal2]
+puts "He owns a %s and %d %s." %[animal1, count, animal2]
 
 # this line is tricky, try to grt it exactly right
 puts "If I add %d, %d, and %d I get %d." % [age, height, weight, age + height + weight]
