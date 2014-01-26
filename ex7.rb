@@ -21,8 +21,9 @@ end12 = "r"
 puts end1 + end2 + end3 + end4 + end5 + end6
 puts end7 + end8 + end9 + end10 + end11 + end12
 
-# this just is polite use of the terminal, try removing it puts 
+# this just is polite use of the terminal, try removing it 
+puts 
 
 __END__
--print does not have newline affixed
+-print does not have newline affixed to the end of the statement
 -"." * 10 replicated the string 10 times
