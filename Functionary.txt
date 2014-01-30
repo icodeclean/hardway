@@ -1,0 +1,15 @@
+
+.to_s		- Converts object to string
+.to_i		- Converts object to integer
+.to_f		- Converts object to float
+
+
+.reverse	- Reverses strings
+.length		- Returns number of characters in a string. NOTE: Not letters, CHARACTERS.
+.upcase		- Changes every lowercase letter to uppercase
+.downcase	- Changes every uppercase letter to lowercase
+.swapcase	- Switches the case of every letter in a string
+.capitalize	- Changes the first character to uppercase (if it's a letter)
+.center()	- Centers a string by adding spaces to the start and end. You need to specify (line_width)
+.ljust()	- Similar to center by pads the string with spaces on the right
+.rjust()	- Similar to center but pads the string with spaces to the left

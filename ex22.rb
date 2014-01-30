@@ -14,7 +14,7 @@
 >   Angle Bracket   #Used as "greater than" in logical comparisons. And also >= "greater than or equal to"
 #   hash            #Used for comments. Also called pound and octothorpe
 =   Equal Sign      #Used to set a variable or compare items in a string when used twice. ==
-%   Percent         #Used in format sequences
+%   Percent         #Used in format sequences. Also called Modulus, used to find remainder.
 []  Brackets        #Used in format sequences, arrays to encapsulate items
 {}  Braces          #Used in String interpolation. Also called Curly brackets
 ()  Parentheses     #Used in method definitions and calling. Also used in Conditional statements. 
