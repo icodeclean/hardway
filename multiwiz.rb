@@ -82,7 +82,9 @@ end
   
 time = Time.new # getting the current time
 formatted_time = time.strftime("%Y-%m-%d %H:%M:%S") # formatting the time
-file_name = name + "-" + formatted_time  # name of file to save session info. it includes date and time
+save_dir = "/multiwiz sessions/"  # sets directory path to save to
+Dir.mkdir(save_dir, 0755) unless File.exists?(save_dir)   # make directory to save to if it does not exist
+file_name = save_dir+ name + "-" + formatted_time + ".txt"  # name of file to save session info. it includes date and time
   
  # session info to be saved + added report_info
  report = <<MESSAGE
