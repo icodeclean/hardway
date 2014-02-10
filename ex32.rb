@@ -31,3 +31,6 @@ end
 for i in elements
   puts "Element was #{i}"
 end
+
+__END__
+numbers = Array(0..5)  # used to assign a range of # to an array without iteration
