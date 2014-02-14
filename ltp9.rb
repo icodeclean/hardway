@@ -85,4 +85,10 @@ while true
    end
 end
 
+__END__
+Needs some adjustment and clarifications
+- Why do these methods only work when predefined about usage?
+- Why did break not work as expected?
+- Need to work on While true loop some more.
+
 
