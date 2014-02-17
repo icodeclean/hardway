@@ -9,6 +9,7 @@ system('clear') # clean up terminal
 spacer = "*" * 100    # ******************************************
 puts spacer, spacer, spacer  # displays 3 lines of spacer
 puts  "Multiwiz is a tool to help test your multiplication skills in any number multiplied by 1 through 12."
+
 puts spacer   # displays another line of spacer
 puts "" # blank line
 
@@ -20,17 +21,17 @@ puts "Hello #{name}! What number would you like to test your chops on today?"
 print prompt
 num = STDIN.gets.chomp.to_i   # gets number player would like to test skill on
 puts "" # blank line
-puts "Great! Here we go!!!"
+puts "Great! To quit, just hit enter with no answer, when you are asked a question.", "Here we go!!!"
 input = 0   # initialize player input
 
-while (!(input.to_s == "exit"))  # sets loop that lets questions continue till player types exit
+while (!(input.to_s == ""))  # sets loop that lets questions continue till player types exit
   multiplier = 1 + rand(12) #setting multiplier to a random number from 1-12. 
   answer = num * multiplier   # Solves the problem and sets the solution to answer
   puts "What is #{num} * #{multiplier}"
   print prompt
   input = STDIN.gets.chomp    # get players solution and set to input 
   
-  if (input.to_s == "exit") # makes sure that when you type "exit" it does not affect your tally by not checking if input is correct again
+  if (input.to_s == "") # makes sure that when you type "exit" it does not affect your tally by not checking if input is correct again
    puts ""  # blank line
         
   elsif (answer == input.to_i)    # checks if answer is correct
