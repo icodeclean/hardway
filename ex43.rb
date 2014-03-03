@@ -31,7 +31,7 @@ class Game
   
   def central_corridor()
     puts "The Gothons of Planet Percal #25 have invaded your ship and destroyed"
-    puts "your entire crew. UYou are the last surviving member and your last"
+    puts "your entire crew. You are the last surviving member and your last"
     puts "mission id to get the neutron destruct bomb from the weapons Armory,"
     puts "put it in the bridge, and blow the ship up after getting into an "
     puts "escape pod."
@@ -39,7 +39,7 @@ class Game
     puts "You're running down the central corridor to the weapons Armory when"
     puts "a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume"
     puts "flowing around his hate filled body. He's blocking the door to the"
-    puts "Armory and about to pull a weapon to bblast you."
+    puts "Armory and about to pull a weapon to blast you."
     
     prompt()
     
@@ -79,19 +79,21 @@ class Game
   end
   
   def laser_weapon_armory()
+    code ="%s%s%s" % [rand(9)+1,rand(9)+1,rand(9)+1]
     puts "You do a dive roll into the Weapon Armory, crouch and scan the room"
     puts "for more Gothons that might be hiding. It's dead quiet, too quiet."
     puts "You stand up and run to the far side of the room and find the"
     puts "neutron bomb in its container. There's a keypad lock on the box"
     puts "and you need the code to get the bomb out. If you get the code "
     puts "wrong 10 times then the lock closes forever and you can't"
-    puts "get the bomb. The code is 3 digits."
-    code ="%s%s%s" % [rand(9)+1,rand(9)+1,rand(9)+1]
+    puts "get the bomb. The code is 3 digits. 'Your instinct says: #{code}'"
+  
+    
     print "[keypad]> "
     guess = gets.chomp()
     guesses = 0
     
-    while guess != code and guesses < 10
+    while guess != code and guesses < 9 #while loop will iterate once at count 0 before ++ 
       puts "BZZZZEDDD!"
       guesses += 1
       print "[keypad]> "
@@ -149,15 +151,16 @@ class Game
   end
   
   def escape_pod()
+    good_pod = rand(5)+1
     puts "You rush through the ship desperately trying to make it to"
     puts "the escape pod before the whole ship explodes. It seems like"
     puts "hardly any Gothons are on the ship., so your run is clear of"
     puts "interference. You get to the chanber with the escape pods, and"
     puts "now need to pick one to take. Some of them could be damaged"
     puts "but you don't have time to  look. There's 5 pods, which one"
-    puts "do you take?"
+    puts "do you take?. 'Your instincts says #{good_pod}'"
     
-    good_pod = rand(5)+1
+
     print "[pod #]>"
     guess = gets.chomp()
     
@@ -182,3 +185,8 @@ a_game = Game.new(:central_corridor)
 a_game.play()
 
 __END__
+something = method(*) makes ruby know the parameter is a method that is available to be called
+something.call() calls that method.
+In this class he set next_room = room.call so whatever method was return will be worked on in the while loop.
+
+Instantiate important variables with the @ sign 
